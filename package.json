@@ -1,0 +1,38 @@
+{
+  "name": "static-assets-server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run build && node dist/src/index.js",
+    "build": "tsc && eslint src/**/*.ts && tsc-alias",
+    "dev": "npx tsx src/index.ts",
+    "lint": "eslint src/**/*.ts"
+  },
+  "type": "module",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "telegraf": "^4.16.3",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^22.4.1",
+    "eslint": "^8.57.0",
+    "globals": "^15.9.0",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.1.0"
+  }
+}

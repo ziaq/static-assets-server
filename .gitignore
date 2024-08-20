@@ -1,0 +1,9 @@
+node_modules
+logs
+dist
+.env
+/assets/sparklines/*
+!/assets/sparklines/.gitkeep
+/assets/token-logos/*
+!/assets/token-logos/.gitkeep
+
