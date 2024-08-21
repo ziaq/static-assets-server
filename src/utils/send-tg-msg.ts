@@ -4,7 +4,9 @@ import { logger } from './logger';
 
 const bot = new Telegraf(config.telegramBotToken);
 
-bot.launch();
+if (!config.isTestEnvironment) {
+  bot.launch();
+}
 
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));

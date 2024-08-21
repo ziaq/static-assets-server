@@ -6,6 +6,7 @@ class Config {
   microserviceName = 'static-assets-server';
   sparklinesDir = path.join(appRoot.path, 'assets/sparklines');
   tokenLogosDir = path.join(appRoot.path, 'assets/token-logos');
+  isTestEnvironment = process.env.NODE_ENV === 'test';
 
   serverIp: string;
   serverPort: number;

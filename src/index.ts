@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Express  } from 'express';
 import cors from 'cors';
 import { logger } from './utils/logger';
 import { setFatalErrorHandlers } from './utils/set-fatal-error-handlers';
@@ -10,7 +10,7 @@ import staticAssetsRouter from './routes/static-assets';
 const serverIp = config.serverIp;
 const serverPort = config.serverPort;
 
-const app = express();
+export const app: Express = express();
 app.use(express.json());
 
 const corsOptions = {
@@ -26,5 +26,8 @@ app.use('/api/delete-sparkline', sparklineApiRouter);
 
 setFatalErrorHandlers();
 
-app.listen(serverPort, serverIp);
-logger.info(`Server is running at ${serverIp}:${serverPort}`);
+if (!config.isTestEnvironment) {
+  app.listen(serverPort, serverIp, () => {
+    logger.info(`Server is running at http://${serverIp}:${serverPort}`);
+  });
+}

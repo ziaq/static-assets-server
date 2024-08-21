@@ -6,4 +6,4 @@ dist
 !/assets/sparklines/.gitkeep
 /assets/token-logos/*
 !/assets/token-logos/.gitkeep
-
+coverage

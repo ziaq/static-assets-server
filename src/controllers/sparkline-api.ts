@@ -8,9 +8,13 @@ const sparklinesDir = config.sparklinesDir;
 
 export async function uploadSparkline (req: Request, res: Response) {
   const { fileName, svgContent } = req.body;
-  const filePath = path.join(sparklinesDir, fileName);
 
   try {
+    if (!fileName || !svgContent) {
+      return res.status(400).send('Miss fileName or svgContent in req body');
+    }
+    const filePath = path.join(sparklinesDir, fileName);
+
     await fs.writeFile(filePath, svgContent);
     res.status(200).send('Success');
     
