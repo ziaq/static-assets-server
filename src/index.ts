@@ -1,5 +1,6 @@
 import express, { Express  } from 'express';
 import cors from 'cors';
+import helmet from "helmet";
 import { logger } from './utils/logger';
 import { setFatalErrorHandlers } from './utils/set-fatal-error-handlers';
 import { config } from '../config';
@@ -18,6 +19,7 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
+app.use(helmet());
 
 app.use(staticAssetsRouter);
 app.use('/api/upload-logo', tokenLogoApiRouter);
