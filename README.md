@@ -1,5 +1,5 @@
 ## Description
-Static content server powered by express.js.
+Static content server developed with express.js.
 
 In the current implementation, it is crucial to limit API endpoint access to the local network only, thereby preventing any external network requests. Nginx can be used as one possible method to enforce this restriction.
 
@@ -76,6 +76,6 @@ Upon successful startup, the console will display a message indicating that the 
 
 ```bash
 
-Server  is  running  at  127.0.0.1:5000
+Server  is  running  on  127.0.0.1:5000
 
 ```
