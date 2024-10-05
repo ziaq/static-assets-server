@@ -1,5 +1,5 @@
 ## Description
-Static content server for safetrending.com, powered by express.js.
+Static content server powered by express.js.
 
 In the current implementation, it is crucial to limit API endpoint access to the local network only, thereby preventing any external network requests. Nginx can be used as one possible method to enforce this restriction.
 
