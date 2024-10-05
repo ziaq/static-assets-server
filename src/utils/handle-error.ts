@@ -7,7 +7,6 @@ export async function handleError(
   text: string,
   error: Error | { message: string },
 ) {
-
   const errorMsg = `Error in ${moduleName} (${config.microserviceName}). ${text}. Error: ${error.message}`;
   
   logger.error(errorMsg);
