@@ -1,5 +1,5 @@
 ## Description
-The server distributing static content also handles the upload of new static files and performs the deletion of sparklines initiated by the sparklines-generator.
+The server distributing static content also handles the upload of new static files and performs the deletion of sparklines triggered by the [sparklines-generator](https://github.com/ziaq/sparkline-generator).
 
 In the current implementation, it is crucial to limit API endpoint access to the local network only, thereby preventing any external network requests. Nginx can be used as one possible method to enforce this restriction.
 
